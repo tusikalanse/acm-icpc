@@ -1,0 +1,1 @@
+print(("ijji" * 30000)[: int(input())])

@@ -1,0 +1,1 @@
+print("RUA!\n" * int(input()), end='')

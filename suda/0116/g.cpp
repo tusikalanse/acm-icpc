@@ -1,0 +1,12 @@
+#include <cstdio>
+
+int main(){
+	int t, m, n;
+	scanf("%d", &t);
+	while(t--){
+		scanf("%d%d", &m, &n);
+		if(n%m==0) printf("%d %d\n", m, n);
+		else printf("-1\n");	
+	}
+	return 0;
+}
