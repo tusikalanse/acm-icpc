@@ -1,7 +1,7 @@
 /*
  * @Author: tusikalanse
  * @Date: 2021-06-24 22:56:46
- * @LastEditTime: 2021-06-24 22:56:47
+ * @LastEditTime: 2021-06-24 22:57:17
  * @LastEditors: tusikalanse
  * @Description: 
  * @FilePath: /algo/test.cpp
@@ -18,7 +18,7 @@ typedef struct {
 
 int main() {
 
-	int a;
+	int a, b;
 	
 	return 0;
 }
