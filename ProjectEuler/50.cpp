@@ -1,7 +1,11 @@
 /*
  * @Author: tusikalanse
  * @Date: 2021-07-09 08:54:35
- * @LastEditTime: 2021-07-09 21:54:56
+<<<<<<< HEAD
+ * @LastEditTime: 2021-07-09 21:56:28
+=======
+ * @LastEditTime: 2021-07-09 21:47:45
+>>>>>>> b8ddcfc9cd50cbf5959e7950e7401b52601bf81f
  * @LastEditors: tusikalanse
  * @Description: 
  * @FilePath: /ProjectEuler/50.cpp
@@ -42,6 +46,8 @@ int s[N];
 int main() {
     int ans = 0, cnt = 0;
     getprime();
+    for (int i = 1; i <= prime[0]; ++i)
+        vis[prime[i]] = 1;
     for (int i = 1; i <= prime[0]; ++i) {
         int sum = prime[i];
         int j = i;
