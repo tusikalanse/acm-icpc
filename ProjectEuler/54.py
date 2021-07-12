@@ -1,15 +1,7 @@
 '''
 Author: tusikalanse
 Date: 2021-07-12 08:17:32
-LastEditTime: 2021-07-12 08:19:46
-LastEditors: tusikalanse
-Description: 
-FilePath: /ProjectEuler/54.py
-'''
-'''
-Author: tusikalanse
-Date: 2021-07-12 08:17:32
-LastEditTime: 2021-07-12 08:17:32
+LastEditTime: 2021-07-12 09:31:18
 LastEditors: tusikalanse
 Description: 
 FilePath: /ProjectEuler/54.py
