@@ -1,14 +1,7 @@
 '''
 Author: tusikalanse
 Date: 2021-07-12 12:40:43
-LastEditTime: 2021-07-12 12:43:03
-LastEditors: tusikalanse
-Description: 
-'''
-'''
-Author: tusikalanse
-Date: 2021-07-12 12:40:42
-LastEditTime: 2021-07-12 12:40:42
+LastEditTime: 2021-07-12 14:55:50
 LastEditors: tusikalanse
 Description: 
 '''

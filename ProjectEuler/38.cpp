@@ -1,7 +1,7 @@
 /*
  * @Author: tusikalanse
  * @Date: 2021-07-09 19:07:10
- * @LastEditTime: 2021-07-09 20:17:34
+ * @LastEditTime: 2021-07-12 15:06:27
  * @LastEditors: tusikalanse
  * @Description: 
  */
@@ -32,7 +32,7 @@ bool gao(vector<int> nums) {
     return cnt == 9;
 }
 
-int contatenate(vector<int> nums) {
+int concatenate(vector<int> nums) {
     string x = "";
     for (int i: nums)
         x += to_string(i);
@@ -48,7 +48,7 @@ int main() {
                 temp.push_back(i * j);
             }
             if (gao(temp)) {
-                ans = max(ans, contatenate(temp));
+                ans = max(ans, concatenate(temp));
                 cout << ans << endl;
             }
         }
