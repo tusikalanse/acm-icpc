@@ -1,7 +1,7 @@
 /*
  * @Author: tusikalanse
  * @Date: 2021-07-01 20:26:55
- * @LastEditTime: 2021-07-01 20:32:49
+ * @LastEditTime: 2021-07-13 17:49:43
  * @LastEditors: tusikalanse
  * @Description: 
  * @FilePath: /ProjectEuler/26.cpp
@@ -18,7 +18,7 @@ const LL INFL = 0x3f3f3f3f3f3f3f3f;
 const int mod = 1e9 + 7;
 //-------------------end head--------------
 
-int getcyclelength(int d) {
+int getperiodlength(int d) {
     map<pair<int, int>, int> m;
     int quotient = 0;
     int reminder = 1;
@@ -38,8 +38,8 @@ int getcyclelength(int d) {
 int main() {
     int ans = 0, id = 0;
     for (int i = 2; i < 1000; ++i) {
-        if (getcyclelength(i) > ans) {
-            ans = getcyclelength(i);
+        if (getperiodlength(i) > ans) {
+            ans = getperiodlength(i);
             id = i;
         }
     }
