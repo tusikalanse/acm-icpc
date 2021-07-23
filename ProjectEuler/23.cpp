@@ -41,7 +41,7 @@ void getprime() {
                 break;
             }
             else {
-                sum_divisor[i * prime[j]] = sum_divisor[i] * sum_divisor[prime[j]];\
+                sum_divisor[i * prime[j]] = sum_divisor[i] * sum_divisor[prime[j]];
                 small_p[i * prime[j]] = 1 + prime[j];
             }
         }
