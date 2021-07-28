@@ -3,7 +3,7 @@ Author: tusikalanse
 Date: 2021-07-13 19:48:40
 LastEditTime: 2021-07-13 20:12:30
 LastEditors: tusikalanse
-Description: 
+Description: square roots period
 '''
 
 from math import sqrt

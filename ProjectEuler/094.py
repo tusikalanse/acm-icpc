@@ -1,13 +1,13 @@
 '''
 Author: tusikalanse
-Date: 2021-07-13 20:50:20
-LastEditTime: 2021-07-13 21:26:19
+Date: 2021-07-28 15:42:59
+LastEditTime: 2021-07-28 15:42:59
 LastEditors: tusikalanse
 Description: pell equation
 '''
 
-from math import sqrt
 
+from math import sqrt
 
 def getperiod(x):
     m, d = 0, 1
@@ -40,15 +40,28 @@ def getminx(n, lis):
     exit(0)
     return [0, 0]
 
-mx, id = 0, -1
 
-for i in range(2, 1001):
-    if sqrt(i) == int(sqrt(i)):
-        continue
-    l = getperiod(i)
-    t = getminx(i, l)
-    if t[0] > mx:
-        mx = t[0]
-        id = i
+l = getperiod(3)
+t = getminx(3, l)
+x0, y0 = t
+x, y = t
+ans = 0
+limit = int(1e9)
 
-print(id)
+while True:
+    if 2 * x + 2 <= limit:
+        if 2 * x % 3 == 2:
+            a = (2 * x + 1) // 3
+            b = a + 1
+            if a > 0:
+                ans += 2 * a + b
+    if 2 * x - 2 <= limit:
+        if 2 * x % 3 == 1:
+            a = (2 * x - 1) // 3
+            b = a - 1
+            if b > 0:
+                ans += 2 * a + b
+    else:
+        break
+    x, y = x0 * x + 3 * y0 * y, x0 * y + x * y0
+print(ans)
