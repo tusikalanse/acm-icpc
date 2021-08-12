@@ -20,26 +20,34 @@ const int mod = 1e6;
 const int N = 1e5 + 10;
 int f[N], w[N];
 
-void init(){
+void init() {
     int cnt = 0;
-	for (int i = 1; ; i++) {
-        if (1ll * i * (3 * i - 1) / 2 < N) w[++cnt] = i * (3 * i - 1) / 2; else break;
-        if (1ll * i * (3 * i + 1) / 2 < N) w[++cnt] = i * (3 * i + 1) / 2; else break;
+    for (int i = 1;; i++) {
+        if (1ll * i * (3 * i - 1) / 2 < N)
+            w[++cnt] = i * (3 * i - 1) / 2;
+        else
+            break;
+        if (1ll * i * (3 * i + 1) / 2 < N)
+            w[++cnt] = i * (3 * i + 1) / 2;
+        else
+            break;
     }
     f[0] = 1;
     for (int i = 1; i < N; i++) {
         f[i] = 0;
         for (int j = 1; j <= cnt && w[j] <= i; j++) {
             int k = (j + 1) / 2;
-            if (k & 1) f[i] = (f[i] + f[i - w[j]]) % mod;
-            else f[i] = (f[i] - f[i - w[j]] + mod) % mod;
+            if (k & 1)
+                f[i] = (f[i] + f[i - w[j]]) % mod;
+            else
+                f[i] = (f[i] - f[i - w[j]] + mod) % mod;
         }
     }
 }
 
 int main() {
     init();
-    for (int i = 1; ; ++i)
+    for (int i = 1;; ++i)
         if (f[i] == 0) {
             cout << i << endl;
             break;

@@ -3,7 +3,7 @@
  * @Date: 2021-06-30 22:15:44
  * @LastEditTime: 2021-06-30 22:21:07
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  * @FilePath: /ProjectEuler/18.cpp
  */
 #include <bits/stdc++.h>

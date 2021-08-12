@@ -3,7 +3,7 @@
  * @Date: 2021-07-09 20:32:18
  * @LastEditTime: 2021-07-09 20:35:55
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -28,7 +28,7 @@ int main() {
     cnt = 0;
     while (cin >> s) {
         int d = 0;
-        for (char x: s)
+        for (char x : s)
             d += x - 'A' + 1;
         cnt += vis[d];
     }

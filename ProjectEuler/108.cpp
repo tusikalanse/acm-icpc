@@ -32,15 +32,14 @@ void getprime() {
             prime[++prime[0]] = i;
             small_p[i] = 3;
             cnt[i] = 3;
-        } 
+        }
         for (int j = 1; j <= prime[0] && i * prime[j] < N; ++j) {
             notprime[i * prime[j]] = 1;
             if (i % prime[j] == 0) {
                 small_p[i * prime[j]] = 2 + small_p[i];
                 cnt[i * prime[j]] = cnt[i] / small_p[i] * small_p[i * prime[j]];
                 break;
-            }
-            else {
+            } else {
                 cnt[i * prime[j]] = cnt[i] * cnt[prime[j]];
                 small_p[i * prime[j]] = 3;
             }

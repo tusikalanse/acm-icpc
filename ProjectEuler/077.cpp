@@ -39,16 +39,17 @@ void getprime() {
 
 int f[N][N];
 
-
 int main() {
     getprime();
     for (int i = 2; i < N; ++i) {
         if (!notprime[i])
             f[i][i] = 1;
         for (int j = 1; j <= i; ++j) {
-            if (f[i][j] == 0) continue;
+            if (f[i][j] == 0)
+                continue;
             for (int k = j; k + i < N; ++k) {
-                if (notprime[k]) continue;
+                if (notprime[k])
+                    continue;
                 f[i + k][k] += f[i][j];
             }
         }

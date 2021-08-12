@@ -32,15 +32,14 @@ void getprime() {
             prime[++prime[0]] = i;
             small_p[i] = 1 + i;
             sum_divisor[i] = 1 + i;
-        } 
+        }
         for (int j = 1; j <= prime[0] && i * prime[j] < N; ++j) {
             notprime[i * prime[j]] = 1;
             if (i % prime[j] == 0) {
                 small_p[i * prime[j]] = 1 + small_p[i] * prime[j];
                 sum_divisor[i * prime[j]] = sum_divisor[i] / small_p[i] * small_p[i * prime[j]];
                 break;
-            }
-            else {
+            } else {
                 sum_divisor[i * prime[j]] = sum_divisor[i] * sum_divisor[prime[j]];
                 small_p[i * prime[j]] = 1 + prime[j];
             }

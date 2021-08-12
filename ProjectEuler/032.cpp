@@ -3,7 +3,7 @@
  * @Date: 2021-07-08 21:11:18
  * @LastEditTime: 2021-07-08 21:17:58
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -21,19 +21,22 @@ bool gao(int x, int y, int z) {
     vis[0] = 1;
     int cnt = 0;
     while (x) {
-        if (vis[x % 10]) return false;
+        if (vis[x % 10])
+            return false;
         vis[x % 10] = 1;
         x /= 10;
         cnt++;
     }
     while (y) {
-        if (vis[y % 10]) return false;
+        if (vis[y % 10])
+            return false;
         vis[y % 10] = 1;
         y /= 10;
         cnt++;
     }
     while (z) {
-        if (vis[z % 10]) return false;
+        if (vis[z % 10])
+            return false;
         vis[z % 10] = 1;
         z /= 10;
         cnt++;
@@ -51,7 +54,7 @@ int main() {
         }
     }
     int total = 0;
-    for (auto i: ans)
+    for (auto i : ans)
         total += i;
     cout << total << endl;
     return 0;

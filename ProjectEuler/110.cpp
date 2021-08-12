@@ -43,9 +43,7 @@ struct state {
             return num < rhs.num;
         return cnt > rhs.cnt;
     }
-    bool operator>(const state& rhs) const {
-        return rhs < *this;
-    }
+    bool operator>(const state& rhs) const { return rhs < *this; }
 };
 
 int limit = 4e6 * 2 - 1;
@@ -61,7 +59,7 @@ int main() {
     first.num = prime[1];
     pq.push(first);
     vis[prime[1]] = 1;
-    while(!pq.empty()) {
+    while (!pq.empty()) {
         state u = pq.top();
         pq.pop();
         if (u.num > ans) {
@@ -72,7 +70,7 @@ int main() {
             continue;
         }
         for (int i = 0; i < u.lis.size(); ++i) {
-            if (i != 0 && u.lis[i] == u.lis[i - 1]) 
+            if (i != 0 && u.lis[i] == u.lis[i - 1])
                 continue;
             state temp = u;
             temp.cnt /= (2 * temp.lis[i] + 1);

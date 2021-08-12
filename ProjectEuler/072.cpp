@@ -3,7 +3,7 @@
  * @Date: 2021-07-15 07:46:38
  * @LastEditTime: 2021-07-15 07:48:25
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  * @FilePath: /ProjectEuler/72.cpp
  */
 #include <bits/stdc++.h>
@@ -39,8 +39,7 @@ void getprime() {
             if (i % prime[j] == 0) {
                 phi[i * prime[j]] = phi[i] * prime[j];
                 break;
-            }
-            else {
+            } else {
                 phi[i * prime[j]] = phi[i] * phi[prime[j]];
             }
         }

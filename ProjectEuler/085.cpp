@@ -3,7 +3,7 @@
  * @Date: 2021-07-19 20:32:33
  * @LastEditTime: 2021-07-19 20:43:24
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -33,7 +33,8 @@ int main() {
                 ans = i * j;
                 cout << i << " " << j << " " << f[i][j] << endl;
             }
-            if (f[i][j] > N) break;
+            if (f[i][j] > N)
+                break;
         }
     }
     cout << ans << endl;

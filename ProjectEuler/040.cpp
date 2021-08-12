@@ -3,7 +3,7 @@
  * @Date: 2021-07-09 20:23:01
  * @LastEditTime: 2021-07-09 20:25:13
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -15,7 +15,6 @@ const int INF = 0x3f3f3f3f;
 const LL INFL = 0x3f3f3f3f3f3f3f3f;
 const int mod = 1e9 + 7;
 //-------------------end head--------------
-
 
 int main() {
     string x = ".";

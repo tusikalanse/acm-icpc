@@ -16,7 +16,8 @@ int main() {
     int f1 = 1, f2 = 1, f3 = 2;
     long long ans = 0;
     while (f3 < N) {
-        if (f3 % 2 == 0) ans += f3;
+        if (f3 % 2 == 0)
+            ans += f3;
         f1 = f2;
         f2 = f3;
         f3 = f1 + f2;

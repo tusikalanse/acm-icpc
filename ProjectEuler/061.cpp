@@ -3,7 +3,7 @@
  * @Date: 2021-07-12 15:29:10
  * @LastEditTime: 2021-07-12 17:24:40
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -50,7 +50,8 @@ bool valid(vector<int> x) {
 }
 
 void dfs(int now, int mask) {
-    if (__builtin_popcount(mask) < now - 1) return;
+    if (__builtin_popcount(mask) < now - 1)
+        return;
     if (now == 6) {
         if (vis[p[5] * 100 + p[0]][6]) {
             ans = 0;
@@ -60,8 +61,10 @@ void dfs(int now, int mask) {
                 mask |= rep[p[i] * 100 + p[(i + 1) % 6]];
                 v.push_back(rep[p[i] * 100 + p[(i + 1) % 6]]);
             }
-            if (mask != (1 << 6) - 1) return;
-            if (!valid(v)) return;
+            if (mask != (1 << 6) - 1)
+                return;
+            if (!valid(v))
+                return;
             for (int i = 0; i < 6; ++i) {
                 ans += p[i] * 100 + p[(i + 1) % 6];
                 cout << p[i] * 100 + p[(i + 1) % 6] << " ";
@@ -74,10 +77,10 @@ void dfs(int now, int mask) {
         if (now == 0) {
             p[now] = i;
             dfs(now + 1, mask);
-        }
-        else {
+        } else {
             int x = p[now - 1] * 100 + i;
-            if (vis[x][6] == 0 || used[x]) continue;
+            if (vis[x][6] == 0 || used[x])
+                continue;
             p[now] = i;
             used[x] = 1;
             dfs(now + 1, mask | rep[x]);

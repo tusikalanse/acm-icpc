@@ -3,7 +3,7 @@
  * @Date: 2021-07-09 19:07:10
  * @LastEditTime: 2021-07-12 15:06:27
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -16,14 +16,14 @@ const LL INFL = 0x3f3f3f3f3f3f3f3f;
 const int mod = 1e9 + 7;
 //-------------------end head--------------
 
-
 bool gao(vector<int> nums) {
     vector<int> vis(10, 0);
     vis[0] = 1;
     int cnt = 0;
-    for (int x: nums) {
+    for (int x : nums) {
         while (x) {
-            if (vis[x % 10]) return false;
+            if (vis[x % 10])
+                return false;
             vis[x % 10] = 1;
             x /= 10;
             cnt++;
@@ -34,7 +34,7 @@ bool gao(vector<int> nums) {
 
 int concatenate(vector<int> nums) {
     string x = "";
-    for (int i: nums)
+    for (int i : nums)
         x += to_string(i);
     return stoi(x);
 }

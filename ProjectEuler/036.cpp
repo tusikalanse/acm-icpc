@@ -3,7 +3,7 @@
  * @Date: 2021-07-09 09:06:59
  * @LastEditTime: 2021-07-09 09:10:35
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -22,7 +22,7 @@ bool is_palindrom(string x) {
     return x == t;
 }
 
-//return reversed binary presentation of x
+// return reversed binary presentation of x
 string binary(int x) {
     string ans = "";
     while (x) {

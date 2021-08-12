@@ -26,12 +26,12 @@ void getprime() {
     memset(notprime, 0, sizeof(notprime));
     notprime[1] = 1;
     for (int i = 2; i < N; ++i) {
-        if (!notprime[i]) 
+        if (!notprime[i])
             prime[++prime[0]] = i;
         for (int j = 1; j <= prime[0] && i * prime[j] < N; ++j) {
             notprime[i * prime[j]] = 1;
-        if (i % prime[j] == 0)
-            break;
+            if (i % prime[j] == 0)
+                break;
         }
     }
 }
@@ -70,14 +70,16 @@ int main() {
         for (int mask = 1; mask < (1 << d) - 1; ++mask) {
             int cnt = 0;
             for (int digit = 0; digit <= 9; ++digit) {
-                if (digit == 0 && (mask >> d - 1) == 1) continue;
+                if (digit == 0 && (mask >> d - 1) == 1)
+                    continue;
                 cnt += !notprime[set_val(prime[i], mask, digit)];
             }
             if (cnt == 8) {
                 cout << prime[i] << endl;
                 cout << mask << endl;
                 for (int digit = 0; digit <= 9; ++digit) {
-                    if (digit == 0 && (mask >> d - 1) == 1) continue;
+                    if (digit == 0 && (mask >> d - 1) == 1)
+                        continue;
                     if (!notprime[set_val(prime[i], mask, digit)]) {
                         cout << set_val(prime[i], mask, digit) << " ";
                     }

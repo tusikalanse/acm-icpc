@@ -3,7 +3,7 @@
  * @Date: 2021-07-08 21:22:16
  * @LastEditTime: 2021-07-08 21:37:27
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -15,7 +15,6 @@ const int INF = 0x3f3f3f3f;
 const LL INFL = 0x3f3f3f3f3f3f3f3f;
 const int mod = 1e9 + 7;
 //-------------------end head--------------
-
 
 int main() {
     for (int x = 1; x <= 9; ++x) {

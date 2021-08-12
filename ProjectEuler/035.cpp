@@ -3,7 +3,7 @@
  * @Date: 2021-07-09 08:54:35
  * @LastEditTime: 2021-07-09 09:00:19
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  * @FilePath: /ProjectEuler/35.cpp
  */
 #include <bits/stdc++.h>
@@ -31,8 +31,8 @@ void getprime() {
             prime[++prime[0]] = i;
         for (int j = 1; j <= prime[0] && i * prime[j] < N; ++j) {
             notprime[i * prime[j]] = 1;
-        if (i % prime[j] == 0)
-            break;
+            if (i % prime[j] == 0)
+                break;
         }
     }
 }
@@ -49,14 +49,16 @@ int num(int x) {
 }
 
 bool gao(int x) {
-    if (notprime[x]) return false;
+    if (notprime[x])
+        return false;
     int d = x;
     int t = num(x);
     do {
         int p = d % 10;
         d /= 10;
         d += ten[t - 1] * p;
-        if (notprime[d]) return false;
+        if (notprime[d])
+            return false;
     } while (d != x);
     return true;
 }

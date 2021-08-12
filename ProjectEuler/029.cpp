@@ -3,7 +3,7 @@
  * @Date: 2021-07-08 12:30:30
  * @LastEditTime: 2021-07-08 12:39:54
  * @LastEditors: Please set LastEditors
- * @Description: 
+ * @Description:
  * @FilePath: /ProjectEuler/29.cpp
  */
 #include <bits/stdc++.h>

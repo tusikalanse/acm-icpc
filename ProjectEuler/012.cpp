@@ -37,15 +37,14 @@ vector<pair<int, int>> factor(LL n) {
 
 int gao(vector<pair<int, int>> x) {
     long long ans = 1;
-    for (auto &i : x) 
+    for (auto &i : x)
         ans *= i.second + 1;
     return ans;
 }
 
-
 int main() {
     long long temp = 1;
-    for (int i = 2; ; ++i) {
+    for (int i = 2;; ++i) {
         temp += i;
         int cnt = gao(factor(temp));
         cout << cnt << " " << temp << endl;

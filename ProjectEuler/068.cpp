@@ -23,7 +23,7 @@ LL ans = 0;
 
 LL concatenate(vector<int> nums) {
     string x = "";
-    for (int i: nums) {
+    for (int i : nums) {
         x += to_string(i);
     }
     return stoll(x);
@@ -46,37 +46,43 @@ vector<int> gao() {
 
 void check() {
     a[7] = a[0] + a[5] - a[1];
-    if (a[7] < 1 || a[7] > 9 || vis[a[7]]) return;
+    if (a[7] < 1 || a[7] > 9 || vis[a[7]])
+        return;
     vis[a[7]] = 1;
 
     a[9] = a[2] + a[7] - a[3];
-    if (a[9] < 1 || a[9] > 9 || vis[a[9]]) return;
+    if (a[9] < 1 || a[9] > 9 || vis[a[9]])
+        return;
     vis[a[9]] = 1;
-    
+
     a[6] = a[4] + a[9] - a[0];
-    if (a[6] < 1 || a[6] > 9 || vis[a[6]]) return;
+    if (a[6] < 1 || a[6] > 9 || vis[a[6]])
+        return;
     vis[a[6]] = 1;
-    
+
     a[8] = a[1] + a[6] - a[2];
-    if (a[8] < 1 || a[8] > 9 || vis[a[8]]) return;
+    if (a[8] < 1 || a[8] > 9 || vis[a[8]])
+        return;
     vis[a[8]] = 1;
-    
-    if (a[5] != a[3] + a[8] - a[4]) return;
+
+    if (a[5] != a[3] + a[8] - a[4])
+        return;
     ans = max(ans, concatenate(gao()));
 }
 
 void dfs(int now) {
     if (now == 5) {
-        if (!vis[10]) return;
+        if (!vis[10])
+            return;
         for (int i = 1; i <= 10; ++i) {
             if (!vis[i]) {
                 vis[i] = 1;
                 a[5] = i;
                 check();
                 for (int x = 5; x < 10; ++x)
-                   vis[a[x]] = 0;
+                    vis[a[x]] = 0;
                 for (int x = 0; x < 5; ++x)
-                   vis[a[x]] = 1;
+                    vis[a[x]] = 1;
             }
         }
         return;

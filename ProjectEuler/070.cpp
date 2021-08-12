@@ -38,8 +38,7 @@ void getprime() {
             if (i % prime[j] == 0) {
                 phi[i * prime[j]] = phi[i] * prime[j];
                 break;
-            }
-            else {
+            } else {
                 phi[i * prime[j]] = phi[i] * phi[prime[j]];
             }
         }
@@ -65,7 +64,8 @@ int main() {
     getprime();
     int n = 0, phin = 0;
     for (int i = 2; i < 10000000; ++i) {
-        if (!is_permutation(i, phi[i])) continue;
+        if (!is_permutation(i, phi[i]))
+            continue;
         if (n == 0 || 1LL * n * phi[i] > 1LL * i * phin) {
             n = i;
             phin = phi[i];

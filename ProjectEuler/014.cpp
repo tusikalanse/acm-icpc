@@ -3,7 +3,7 @@
  * @Date: 2021-06-29 00:50:49
  * @LastEditTime: 2021-06-29 01:05:18
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  * @FilePath: /atcoder/mnt/e/algo/ProjectEuler/14.cpp
  */
 
@@ -31,7 +31,8 @@ int& step(LL x) {
 }
 
 int gao(LL x) {
-    if (step(x)) return step(x);
+    if (step(x))
+        return step(x);
     return step(x) = x % 2 == 0 ? gao(x / 2) + 1 : gao(3 * x + 1) + 1;
 }
 
@@ -41,7 +42,7 @@ int main() {
     for (int i = 2; i <= N; ++i) {
         if (gao(i) > step(ans))
             ans = i;
-        //cout << i << " " << ans << " " << step(ans) << " " << ss.size() << endl;
+        // cout << i << " " << ans << " " << step(ans) << " " << ss.size() << endl;
     }
     cout << ans << endl;
     return 0;

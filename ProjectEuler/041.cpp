@@ -3,7 +3,7 @@
  * @Date: 2021-07-09 08:54:35
  * @LastEditTime: 2021-07-09 20:57:06
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  * @FilePath: /ProjectEuler/41.cpp
  */
 #include <bits/stdc++.h>
@@ -31,8 +31,8 @@ void getprime() {
             prime[++prime[0]] = i;
         for (int j = 1; j <= prime[0] && i * prime[j] < N; ++j) {
             notprime[i * prime[j]] = 1;
-        if (i % prime[j] == 0)
-            break;
+            if (i % prime[j] == 0)
+                break;
         }
     }
 }

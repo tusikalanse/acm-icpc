@@ -3,7 +3,7 @@
  * @Date: 2021-07-09 21:03:22
  * @LastEditTime: 2021-07-09 21:33:24
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  * @FilePath: /ProjectEuler/47.cpp
  */
 #include <bits/stdc++.h>
@@ -31,8 +31,8 @@ void getprime() {
             prime[++prime[0]] = i;
         for (int j = 1; j <= prime[0] && i * prime[j] < N; ++j) {
             notprime[i * prime[j]] = 1;
-        if (i % prime[j] == 0)
-            break;
+            if (i % prime[j] == 0)
+                break;
         }
     }
 }
@@ -41,7 +41,8 @@ bool gao(int n) {
     int cnt = 0, x = 2;
     while (x * x <= n) {
         if (n % x == 0) {
-            while (n % x == 0) n /= x;
+            while (n % x == 0)
+                n /= x;
             cnt++;
         }
         x++;
@@ -53,13 +54,18 @@ bool gao(int n) {
 int main() {
     getprime();
     for (int x = 1; x + 3 < N; ++x) {
-        if (!notprime[x]) continue;
-        if (!notprime[x + 1]) continue;
-        if (!notprime[x + 2]) continue;
-        if (!notprime[x + 3]) continue;
+        if (!notprime[x])
+            continue;
+        if (!notprime[x + 1])
+            continue;
+        if (!notprime[x + 2])
+            continue;
+        if (!notprime[x + 3])
+            continue;
         if (x % 100000 == 0)
             cout << x << endl;
-        if (!gao(x) || !gao(x + 1) || !gao(x + 2) || !gao(x + 3)) continue;
+        if (!gao(x) || !gao(x + 1) || !gao(x + 2) || !gao(x + 3))
+            continue;
         cout << x << endl;
         break;
     }

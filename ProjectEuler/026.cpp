@@ -3,7 +3,7 @@
  * @Date: 2021-07-01 20:26:55
  * @LastEditTime: 2021-07-13 17:49:43
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  * @FilePath: /ProjectEuler/26.cpp
  */
 
@@ -33,7 +33,6 @@ int getperiodlength(int d) {
     }
     return 0;
 }
-
 
 int main() {
     int ans = 0, id = 0;

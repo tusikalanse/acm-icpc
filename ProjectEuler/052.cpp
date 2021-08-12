@@ -40,13 +40,19 @@ bool is_permutation(int x, int y) {
 }
 
 int main() {
-    for (int i = 1; ; ++i) {
-        if (num_of_digits(i) != num_of_digits(6 * i)) continue;
-        if (!is_permutation(i, 2 * i)) continue;
-        if (!is_permutation(i, 3 * i)) continue;
-        if (!is_permutation(i, 4 * i)) continue;
-        if (!is_permutation(i, 5 * i)) continue;
-        if (!is_permutation(i, 6 * i)) continue;
+    for (int i = 1;; ++i) {
+        if (num_of_digits(i) != num_of_digits(6 * i))
+            continue;
+        if (!is_permutation(i, 2 * i))
+            continue;
+        if (!is_permutation(i, 3 * i))
+            continue;
+        if (!is_permutation(i, 4 * i))
+            continue;
+        if (!is_permutation(i, 5 * i))
+            continue;
+        if (!is_permutation(i, 6 * i))
+            continue;
         cout << i << endl;
         return 0;
     }

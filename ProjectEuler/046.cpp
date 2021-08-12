@@ -3,7 +3,7 @@
  * @Date: 2021-07-09 08:54:35
  * @LastEditTime: 2021-07-09 21:02:11
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  * @FilePath: /ProjectEuler/46.cpp
  */
 #include <bits/stdc++.h>
@@ -31,8 +31,8 @@ void getprime() {
             prime[++prime[0]] = i;
         for (int j = 1; j <= prime[0] && i * prime[j] < N; ++j) {
             notprime[i * prime[j]] = 1;
-        if (i % prime[j] == 0)
-            break;
+            if (i % prime[j] == 0)
+                break;
         }
     }
 }
@@ -44,8 +44,9 @@ bool is_square(int x) {
 
 int main() {
     getprime();
-    for (int x = 9; ; x += 2) {
-        if (!notprime[x]) continue;
+    for (int x = 9;; x += 2) {
+        if (!notprime[x])
+            continue;
         int flag = 0;
         for (int j = 2; prime[j] < x; ++j) {
             if (is_square((x - prime[j]) / 2)) {
@@ -54,7 +55,8 @@ int main() {
                 break;
             }
         }
-        if (flag) continue;
+        if (flag)
+            continue;
         cout << x << endl;
         break;
     }

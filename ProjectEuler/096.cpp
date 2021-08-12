@@ -24,7 +24,7 @@ inline int getBoxId(int row, int col) {
 
 int SuDoku[10][10];
 int origin[10][10];
-int vis[3][10][10]; //[row/col/box][id][num]
+int vis[3][10][10];  //[row/col/box][id][num]
 
 int ans = 0;
 
@@ -47,9 +47,12 @@ void dfs(int row, int col) {
         return;
     }
     for (int i = 1; i < 10; ++i) {
-        if (vis[0][row][i]) continue;
-        if (vis[1][col][i]) continue;
-        if (vis[2][getBoxId(row, col)][i]) continue;
+        if (vis[0][row][i])
+            continue;
+        if (vis[1][col][i])
+            continue;
+        if (vis[2][getBoxId(row, col)][i])
+            continue;
         vis[0][row][i] = vis[1][col][i] = vis[2][getBoxId(row, col)][i] = 1;
         SuDoku[row][col] = i;
         dfs(row, col + 1);

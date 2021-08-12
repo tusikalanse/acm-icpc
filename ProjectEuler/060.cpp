@@ -3,7 +3,7 @@
  * @Date: 2021-07-12 14:57:00
  * @LastEditTime: 2021-07-12 19:32:46
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -26,25 +26,27 @@ void getprime() {
     memset(notprime, 0, sizeof(notprime));
     notprime[1] = 1;
     for (int i = 2; i < N; ++i) {
-        if (!notprime[i]) 
+        if (!notprime[i])
             prime[++prime[0]] = i;
         for (int j = 1; j <= prime[0] && i * prime[j] < N; ++j) {
             notprime[i * prime[j]] = 1;
-        if (i % prime[j] == 0)
-            break;
+            if (i % prime[j] == 0)
+                break;
         }
     }
 }
 
 bool isprime(LL x) {
-    if (x < N) return !notprime[x];
+    if (x < N)
+        return !notprime[x];
     for (int i = 1; i <= prime[0]; ++i) {
-        if (x % prime[i] == 0) return false;
+        if (x % prime[i] == 0)
+            return false;
     }
     if (1LL * prime[prime[0]] * prime[prime[0]] < x) {
         LL i = prime[prime[0]] + 1;
         while (i * i <= x) {
-            if (x % i == 0) 
+            if (x % i == 0)
                 return false;
             i++;
         }

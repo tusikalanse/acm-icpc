@@ -3,7 +3,7 @@
  * @Date: 2021-06-25 21:47:14
  * @LastEditTime: 2021-06-25 22:10:27
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  * @FilePath: /ProjectEuler/11.cpp
  */
 #include <bits/stdc++.h>
@@ -18,7 +18,6 @@ const int mod = 1e9 + 7;
 //-------------------end head--------------
 
 int a[20][20];
-
 
 int main() {
     for (int i = 0; i < 20; ++i) {

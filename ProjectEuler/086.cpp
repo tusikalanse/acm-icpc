@@ -3,7 +3,7 @@
  * @Date: 2021-07-20 17:13:56
  * @LastEditTime: 2021-07-20 17:18:30
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -43,8 +43,7 @@ int main() {
         if (gao(mid) > N) {
             r = mid - 1;
             ans = mid;
-        }
-        else 
+        } else
             l = mid + 1;
     }
     cout << ans << endl;

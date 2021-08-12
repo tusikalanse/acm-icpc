@@ -1,0 +1,29 @@
+---
+Language:        Cpp
+BasedOnStyle:  Google
+PointerAlignment: Right
+AccessModifierOffset: -4
+AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+BraceWrapping:   
+  AfterClass:      false
+  AfterControlStatement: false
+  AfterEnum:       false
+  AfterFunction:   false
+  AfterNamespace:  false
+  AfterObjCDeclaration: false
+  AfterStruct:     false
+  AfterUnion:      false
+  AfterExternBlock: false
+  BeforeCatch:     false
+  BeforeElse:      false
+  AfterCaseLabel:  false
+BreakBeforeBraces: Custom
+ColumnLimit:     120
+IndentWidth:     4
+TabWidth:        4
+IncludeBlocks: Preserve
+---
+Language:     Proto
+DisableFormat: true

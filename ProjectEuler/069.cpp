@@ -38,8 +38,7 @@ void getprime() {
             if (i % prime[j] == 0) {
                 phi[i * prime[j]] = phi[i] * prime[j];
                 break;
-            }
-            else {
+            } else {
                 phi[i * prime[j]] = phi[i] * phi[prime[j]];
             }
         }

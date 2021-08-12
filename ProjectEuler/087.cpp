@@ -3,7 +3,7 @@
  * @Date: 2021-07-20 17:39:37
  * @LastEditTime: 2021-07-20 18:54:28
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -30,8 +30,8 @@ void getprime() {
             prime[++prime[0]] = i;
         for (int j = 1; j <= prime[0] && i * prime[j] < N; ++j) {
             notprime[i * prime[j]] = 1;
-        if (i % prime[j] == 0)
-            break;
+            if (i % prime[j] == 0)
+                break;
         }
     }
 }
@@ -44,8 +44,11 @@ int main() {
     getprime();
     for (int i = 1; prime[i] * prime[i] < x; ++i) {
         for (int j = 1; prime[i] * prime[i] + prime[j] * prime[j] * prime[j] < x; ++j) {
-            for (int k = 1; prime[i] * prime[i] + prime[j] * prime[j] * prime[j] + prime[k] * prime[k] * prime[k] * prime[k] <= x; ++k) {
-                cnt.insert(prime[i] * prime[i] + prime[j] * prime[j] * prime[j] + prime[k] * prime[k] * prime[k] * prime[k]);
+            for (int k = 1;
+                 prime[i] * prime[i] + prime[j] * prime[j] * prime[j] + prime[k] * prime[k] * prime[k] * prime[k] <= x;
+                 ++k) {
+                cnt.insert(prime[i] * prime[i] + prime[j] * prime[j] * prime[j] +
+                           prime[k] * prime[k] * prime[k] * prime[k]);
             }
         }
     }

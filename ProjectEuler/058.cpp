@@ -3,7 +3,7 @@
  * @Date: 2021-07-12 12:42:39
  * @LastEditTime: 2021-07-12 12:52:51
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -21,7 +21,6 @@ const int N = 1e8 + 10;
 LL ans = 0;
 int p = 2, x = 1;
 
-
 int prime[N];
 bool notprime[N];
 
@@ -30,20 +29,22 @@ void getprime() {
     memset(notprime, 0, sizeof(notprime));
     notprime[1] = 1;
     for (int i = 2; i < N; ++i) {
-        if (!notprime[i]) 
+        if (!notprime[i])
             prime[++prime[0]] = i;
         for (int j = 1; j <= prime[0] && i * prime[j] < N; ++j) {
             notprime[i * prime[j]] = 1;
-        if (i % prime[j] == 0)
-            break;
+            if (i % prime[j] == 0)
+                break;
         }
     }
 }
 
 bool isprime(LL x) {
-    if (x < N) return !notprime[x];
+    if (x < N)
+        return !notprime[x];
     for (int i = 1; i <= prime[0]; ++i) {
-        if (x % prime[i] == 0) return false;
+        if (x % prime[i] == 0)
+            return false;
     }
     return true;
 }
@@ -51,7 +52,7 @@ bool isprime(LL x) {
 int main() {
     getprime();
     int total = 1, cnt = 0;
-    for (int i = 3; ; i += 2) {
+    for (int i = 3;; i += 2) {
         for (int _ = 0; _ < 4; ++_) {
             x += p;
             total++;

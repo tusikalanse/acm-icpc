@@ -3,7 +3,7 @@
  * @Date: 2021-07-28 16:18:09
  * @LastEditTime: 2021-07-28 17:02:20
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -49,7 +49,8 @@ void dfs(int now, const string& s, const string& t, int n) {
         return;
     }
     for (int i = s[now] == s[0] || s[now] == t[0]; i < 10; ++i) {
-        if (vis[i]) continue;
+        if (vis[i])
+            continue;
         vis[i] = 1;
         rep[s[now] - 'A'] = i;
         dfs(now + 1, s, t, n);
@@ -60,18 +61,20 @@ void dfs(int now, const string& s, const string& t, int n) {
 
 int main() {
     string s;
-    while (cin >> s) 
+    while (cin >> s)
         words.push_back(s);
     int n = words.size();
     for (int i = 0; i < n; ++i) {
         for (int j = i + 1; j < n; ++j) {
-            if (words[i].size() != words[j].size()) continue;
+            if (words[i].size() != words[j].size())
+                continue;
             vector<int> ci(26, 0), cj(26, 0);
-            for (char ch: words[i])
+            for (char ch : words[i])
                 ci[ch - 'A']++;
-            for (char ch: words[j])
+            for (char ch : words[j])
                 cj[ch - 'A']++;
-            if (ci != cj) continue;
+            if (ci != cj)
+                continue;
             memset(rep, -1, sizeof(rep));
             memset(vis, 0, sizeof(vis));
             dfs(0, words[i], words[j], words[i].size());

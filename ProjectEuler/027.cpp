@@ -3,7 +3,7 @@
  * @Date: 2021-07-07 22:01:38
  * @LastEditTime: 2021-07-07 22:15:53
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  * @FilePath: /ProjectEuler/27.cpp
  */
 #include <bits/stdc++.h>
@@ -44,7 +44,7 @@ bool isprime(LL x) {
         return !notprime[x];
     else {
         cout << x << endl;
-        for (int i = 1; i <= prime[0]; ++i) 
+        for (int i = 1; i <= prime[0]; ++i)
             if (x % prime[i] == 0)
                 return false;
         return true;

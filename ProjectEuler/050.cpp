@@ -7,7 +7,7 @@
  * @LastEditTime: 2021-07-09 21:47:45
 >>>>>>> b8ddcfc9cd50cbf5959e7950e7401b52601bf81f
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  * @FilePath: /ProjectEuler/50.cpp
  */
 #include <bits/stdc++.h>
@@ -31,12 +31,12 @@ void getprime() {
     memset(notprime, 0, sizeof(notprime));
     notprime[1] = 1;
     for (int i = 2; i < N; ++i) {
-        if (!notprime[i]) 
+        if (!notprime[i])
             prime[++prime[0]] = i;
         for (int j = 1; j <= prime[0] && i * prime[j] < N; ++j) {
             notprime[i * prime[j]] = 1;
-        if (i % prime[j] == 0)
-            break;
+            if (i % prime[j] == 0)
+                break;
         }
     }
 }

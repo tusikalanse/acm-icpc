@@ -3,7 +3,7 @@
  * @Date: 2021-07-09 12:35:23
  * @LastEditTime: 2021-07-09 12:39:44
  * @LastEditors: tusikalanse
- * @Description: 
+ * @Description:
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -30,8 +30,8 @@ void getprime() {
             prime[++prime[0]] = i;
         for (int j = 1; j <= prime[0] && i * prime[j] < N; ++j) {
             notprime[i * prime[j]] = 1;
-        if (i % prime[j] == 0)
-            break;
+            if (i % prime[j] == 0)
+                break;
         }
     }
 }
@@ -41,14 +41,16 @@ int ten[] = {1, 10, 100, 1000, 10000, 100000, 1000000, 10000000};
 bool gao(int x) {
     int d = x;
     while (d) {
-        if (notprime[d]) return false;
+        if (notprime[d])
+            return false;
         d /= 10;
     }
     d = x;
     int cnt = 1;
     do {
         d = x % ten[cnt++];
-        if (notprime[d]) return false;
+        if (notprime[d])
+            return false;
     } while (d != x);
     return true;
 }

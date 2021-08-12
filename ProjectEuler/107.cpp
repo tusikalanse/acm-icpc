@@ -32,9 +32,7 @@ bool unite(int x, int y) {
 
 struct edge {
     int from, to, weight;
-    bool operator < (const edge &rhs) const {
-        return weight < rhs.weight;
-    }
+    bool operator<(const edge &rhs) const { return weight < rhs.weight; }
 };
 
 vector<edge> G;
@@ -54,7 +52,7 @@ int main() {
         }
     }
     sort(G.begin(), G.end());
-    for (auto e: G) {
+    for (auto e : G) {
         if (!unite(e.from, e.to)) {
             ans += e.weight;
         }
