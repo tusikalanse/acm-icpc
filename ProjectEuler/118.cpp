@@ -1,7 +1,7 @@
 /*
  * @Author: tusikalanse
  * @Date: 2021-08-19 09:17:51
- * @LastEditTime: 2021-08-19 09:28:14
+ * @LastEditTime: 2021-08-19 09:29:02
  * @LastEditors: tusikalanse
  * @Description: prime test & dfs
  */
