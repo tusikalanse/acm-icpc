@@ -53,7 +53,6 @@
 */CMake*
 */cmake*
 
-
 ### java ###
 *.class
 
@@ -66,3 +65,6 @@
 ### other ###
 *.zip
 */.vscode*
+
+## testfile ###
+test.*
