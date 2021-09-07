@@ -42,9 +42,6 @@
 *.i
 *.s
 
-# # Test files
-# *test*
-
 ### vscode ###
 .vscode/*
 
