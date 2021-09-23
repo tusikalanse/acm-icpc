@@ -1,7 +1,7 @@
 /*
  * @Author: tusikalanse
  * @Date: 2021-09-17 09:22:39
- * @LastEditTime: 2021-09-17 10:03:30
+ * @LastEditTime: 2021-09-22 09:23:41
  * @LastEditors: tusikalanse
  * @Description: exgcd get inverse
  */
@@ -48,7 +48,7 @@ void exgcd(int a, int b, int& x, int& y) {
     if (b == 0) {
         x = 1, y = 0;
         return;
-        }
+    }
     exgcd(b, a % b, y, x);
     y -= a / b * x;
 }
