@@ -19,7 +19,7 @@ void getnext() {
 			j = po + nxt[po] - i;
 			if(j < 0) j = 0;
 			while(i + j < len && t[j] == s[i + j])
-				++i;
+				++j;
 			nxt[i] = j;
 			po = i;
 		}
@@ -28,7 +28,7 @@ void getnext() {
 
 void exkmp() {
 	int len = strlen(s), po, i = 0, j, l2 = strlen(t);
-	while(t[i] == s[i] && i < len && i < j2) 
+	while(t[i] == s[i] && i < len && i < l2) 
 		++i;
 	extend[0] = i;
 	po = 0;
