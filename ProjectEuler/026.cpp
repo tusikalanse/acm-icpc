@@ -21,15 +21,15 @@ const int mod = 1e9 + 7;
 int getperiodlength(int d) {
     map<pair<int, int>, int> m;
     int quotient = 0;
-    int reminder = 1;
+    int remainder = 1;
     int digit = 0;
     while (++digit) {
-        reminder *= 10;
-        quotient = reminder / d;
-        reminder %= d;
-        if (m[{quotient, reminder}])
-            return digit - m[{quotient, reminder}];
-        m[{quotient, reminder}] = digit;
+        remainder *= 10;
+        quotient = remainder / d;
+        remainder %= d;
+        if (m[{quotient, remainder}])
+            return digit - m[{quotient, remainder}];
+        m[{quotient, remainder}] = digit;
     }
     return 0;
 }

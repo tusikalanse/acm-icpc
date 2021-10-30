@@ -22,13 +22,13 @@ def get_digit(x, y):
 def gao(x):
     ans = 0
     divider = 0
-    reminder = x
+    remainder = x
     for i in range(100):
-        j = get_digit(divider, reminder)
-        reminder -= j * (j + divider * 10)
+        j = get_digit(divider, remainder)
+        remainder -= j * (j + divider * 10)
         ans += j
         divider = divider * 10 + 2 * j
-        reminder *= 100
+        remainder *= 100
     return ans
 
 total = 0
